@@ -1,19 +1,24 @@
-# Flutter/Dart specific
+# Flutter/Dart/Pub related
 **/doc/api/
 **/ios/Flutter/.last_build_id
+**/*.dart.js
+**/*.dart.js.deps
+**/*.dart.js.map
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
+.fvm/
 .packages
 .pub-cache/
 .pub/
 build/
-flutter_*.png
-linked_*.ds
-unlinked.ds
-unlinked_spec.ds
-.flutter-plugins-dependencies
-*.flutter-plugins-dependencies
+coverage/
+lib/generated_plugin_registrant.dart
+pubspec.lock
+pubspec_overrides.yaml
+.dart_tool/
+.packages
+*.reflectable.dart
 
 # Android related
 **/android/**/gradle-wrapper.jar
@@ -24,13 +29,33 @@ unlinked_spec.ds
 **/android/local.properties
 **/android/**/GeneratedPluginRegistrant.java
 **/android/key.properties
+*.jks
+*.keystore
 **/android/.idea/
 **/android/app/debug
 **/android/app/profile
 **/android/app/release
-*.jks
+**/android/**/*.apk
+**/android/**/*.ap_
+**/android/**/*.aab
+**/android/**/*.dex
+**/android/**/*.class
+**/android/.project
+**/android/app/.project
+**/android/.classpath
+**/android/app/.classpath
+**/android/.settings/
+**/android/**/build/
+**/android/app/release/
+**/android/.externalNativeBuild/
+**/android/.cxx/
+**/android/app/src/main/jniLibs/
+**/android/gradle.properties
+**/android/local.properties
+**/android/key.properties
+**/android/signing.properties
 
-# iOS related
+# iOS/XCode related
 **/ios/**/*.mode1v3
 **/ios/**/*.mode2v3
 **/ios/**/*.moved-aside
@@ -59,67 +84,208 @@ unlinked_spec.ds
 **/ios/Flutter/flutter_export_environment.sh
 **/ios/ServiceDefinitions.json
 **/ios/Runner/GeneratedPluginRegistrant.*
+**/ios/**/*.ipa
+**/ios/**/*.dSYM.zip
+**/ios/**/*.dSYM
+**/ios/build/
+**/ios/.symlinks/
+**/ios/Pods/
+**/ios/Runner.xcworkspace/
+**/ios/*.xcodeproj/*
+!**/ios/*.xcodeproj/project.pbxproj
+!**/ios/*.xcodeproj/xcshareddata/
+!**/ios/*.xcworkspace/contents.xcworkspacedata
+**/ios/*.mode1v3
+**/ios/*.mode2v3
+**/ios/*.moved-aside
+**/ios/*.pbxuser
+**/ios/*.perspectivev3
+**/ios/*sync/
+**/ios/Flutter/ephemeral/
+**/ios/Flutter/Flutter.xcconfig
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/flutter_export_environment.sh
 
 # macOS related
 **/macos/Flutter/GeneratedPluginRegistrant.swift
 **/macos/Flutter/ephemeral
-
-# Web related
-**/web/favicon.png
-lib/generated_plugin_registrant.dart
-**/web/icons/
-**/web/images/
-
-# Windows related
-**/windows/flutter/generated_plugin_registrant.cc
-**/windows/flutter/generated_plugin_registrant.h
-**/windows/flutter/generated_plugins.cmake
+**/macos/**/*.mode1v3
+**/macos/**/*.mode2v3
+**/macos/**/*.moved-aside
+**/macos/**/*.pbxuser
+**/macos/**/*.perspectivev3
+**/macos/**/*sync/
+**/macos/**/.sconsign.dblite
+**/macos/**/.tags*
+**/macos/**/.vagrant/
+**/macos/**/DerivedData/
+**/macos/**/Icon?
+**/macos/**/Pods/
+**/macos/**/.symlinks/
+**/macos/**/profile
+**/macos/**/xcuserdata
+**/macos/.generated/
+**/macos/Flutter/ephemeral/
+**/macos/Flutter/GeneratedPluginRegistrant.*
+**/macos/*.app
+**/macos/build/
 
 # Linux related
 **/linux/flutter/generated_plugin_registrant.cc
 **/linux/flutter/generated_plugin_registrant.h
 **/linux/flutter/generated_plugins.cmake
+**/linux/packaging/
+**/linux/build/
 
-# Coverage
-coverage/
-*.lcov
+# Windows related
+**/windows/flutter/generated_plugin_registrant.cc
+**/windows/flutter/generated_plugin_registrant.h
+**/windows/flutter/generated_plugins.cmake
+**/windows/out/
+**/windows/.vs/
+**/windows/build/
+**/windows/**/*.dll
+**/windows/**/*.exe
+**/windows/**/*.pdb
+**/windows/**/*.ilk
+**/windows/**/*.exp
+**/windows/**/*.lib
+**/windows/**/*.suo
+**/windows/**/*.user
+**/windows/**/*.sdf
+**/windows/**/*.opensdf
 
-# Symbols
-app.*.symbols
+# Web related
+**/web/favicon.png
+**/web/icons/
+**/web/images/
+**/web/manifest.json
+**/web/index.html
+**/web/assets
+**/web/canvaskit/
+**/web/*.js
+**/web/*.js.deps
+**/web/*.js.map
+**/web/flutter_service_worker.js
 
-# Obfuscation
-app.*.map.json
-
-# Android Studio
-.idea/
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/gradle.xml
-.idea/assetWizardSettings.xml
-.idea/dictionaries
-.idea/libraries
-.idea/caches
-
-# VS Code
-.vscode/
+# IDE - VSCode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+!.vscode/snippets
 *.code-workspace
+.history/
+.ionide
+.vs/
 
-# IntelliJ
+# IDE - IntelliJ/Android Studio
 *.iml
 *.ipr
 *.iws
 .idea/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/contentModel.xml
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+.idea/**/gradle.xml
+.idea/**/libraries
+.idea/modules.xml
+.idea/*.iml
+.idea/modules
+.idea/misc.xml
+.idea/caches
+.idea/artifacts
+.idea/compiler.xml
+.idea/jarRepositories.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/.gitignore
+.idea/encodings.xml
+.idea/scopes/
+.idea/.name
+.idea/replstate.xml
+.idea/sonarlint/
 
-# Temporary files
+# IDE - Eclipse
+.project
+.classpath
+.settings/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+.loadpath
+.factorypath
+
+# Testing and Coverage
+coverage/
+.test_coverage.dart
+.test_report.json
+coverage.xml
+*.lcov
+.nyc_output/
+test-results/
+playwright-report/
+reports/
+htmlcov/
+
+# Database files
+*.sqlite
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+
+# Logging
 *.log
 *.log.*
-*.tmp
-*.temp
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+firebase-debug.log*
+firebase-debug.*.log*
+crash.log
+crash-*.log
+
+# Environment & Secrets
+.env
+.env.*
+*.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.development.local
+.env.test.local
+.env.production.local
+google-services.json
+GoogleService-Info.plist
+key.properties
+secrets.tar
+secrets.zip
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+*.asc
+*.gpg
+
+# System Files
 .DS_Store
 .DS_Store?
 ._*
@@ -127,25 +293,73 @@ app.*.map.json
 .Trashes
 ehthumbs.db
 Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+*.lnk
+*~
+*.sw[mnpcod]
+.tmp
+.temp
+*.tmp
+*.temp
+.grunt
+.lock-wscript
+.yarn-integrity
+.npm
+.eslintcache
+.stylelintcache
+.node_repl_history
+.vuepress/dist
+.serverless/
+.fusebox/
+.dynamodb/
+.tern-port
+.env.*.local
 
-# Package related
-pubspec.lock
-.packages
-.test_coverage.dart
-.test_runner.dart
+# Build outputs
+dist/
+out/
+build/
+*.tsbuildinfo
+.next
+.nuxt
+.vuepress/dist
+.docusaurus
+.firebase/
+.vercel
+.now
+.cache/
+.parcel-cache
+.output
+.artifacts
 
-# Environment files
-.env
-.env.local
-*.env.*
-google-services.json
-GoogleService-Info.plist
+# Dependency directories
+node_modules/
+jspm_packages/
+bower_components/
+vendor/
+.pnp/
+.pnp.js
+.pub-cache/
+.pub/
+packages/
+!**/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 
-# Build directories for other platforms
-/linux/
-/macos/
-/windows/
-/web/
+# Generated files
+*.g.dart
+*.freezed.dart
+*.gr.dart
+*.mocks.dart
+*.config.dart
+*.module.dart
+*.chopper.dart
+*.swagger.dart
+*.pb.dart
+*.pbenum.dart
+*.pbjson.dart
+*.pbserver.dart
+generated/
+generated_plugin_registrant.dart
 
 # Exceptions to above rules
 !**/ios/**/default.mode1v3
